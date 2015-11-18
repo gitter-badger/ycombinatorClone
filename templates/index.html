@@ -13,11 +13,12 @@
 <span style= margin-top: 5px;position: absolute;">Hacker News</span>
 
 </div>
+<div class="secondary">
 <p><span>{{F.id }}</span>
-<span>	{{F.title }}</span>
-<span>{{F.link }}</span>
+<span><a href=" {{ F.linka }} ">	{{F.title }} </a></span>
+<span class="grey"><a href=" {{ F.linkb }} ">( {{F.link }} ) </a></span>
 </p>
-<p><span>{{F.votes }} </span> <span style="border-left:1px solid black"> <p>{{F.time }}</p>
+<p><span>{{F.votes }} points </span> &nbsp; &nbsp; <span>{{F.author }} </span> &nbsp; &nbsp; <span class="bdr"> &nbsp; &nbsp; {{F.time }}
  </span> </p></p>
 
 </div>
