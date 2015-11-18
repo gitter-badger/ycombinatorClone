@@ -9,7 +9,11 @@
 </head>
 
 <body>
-{%block title%}  {%endblock%}
+{%block title%} <div class='header'>
+<img src= "https://news.ycombinator.com/y18.gif" height="1opx" width="10px">
+<span style= margin-top: 5px;position: absolute;">Hacker News</span>
+
+</div> {%endblock%}
 {%block content%}
 <p>{{title}}</p>
  {%if Forum %}

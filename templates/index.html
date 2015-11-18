@@ -8,17 +8,13 @@
 {% if Forum %}
 {% for F in Forum %}
 
-<div class='header'>
-<img src= "https://news.ycombinator.com/y18.gif" height="1opx" width="10px">
-<span style= margin-top: 5px;position: absolute;">Hacker News</span>
 
-</div>
 <div class="secondary">
-<p><span>{{F.id }}</span>
+<p><span>{{F.id }} <a href=" {{counter }}">Upvote</a> </span>
 <span><a href=" {{ F.linka }} ">	{{F.title }} </a></span>
 <span class="grey"><a href=" {{ F.linkb }} ">( {{F.link }} ) </a></span>
 </p>
-<p><span>{{F.votes }} points </span> &nbsp; &nbsp; <span>{{F.author }} </span> &nbsp; &nbsp; <span class="bdr"> &nbsp; &nbsp; {{F.time }}
+<p><span>{{F.votes }} points </span> &nbsp; &nbsp; <span>by {{F.author }} </span> &nbsp; &nbsp; <span class="bdr"> &nbsp; &nbsp; {{F.time }}
  </span> </p></p>
 
 </div>

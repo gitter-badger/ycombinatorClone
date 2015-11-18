@@ -1,8 +1,9 @@
 from django.db import models
-
+from django.db.models import F
 # Create your models here.
 
 class Forum(models.Model):
+	counter = models.IntegerField()
 	linka = models.CharField(max_length=100, unique=False)
 	linkb = models.CharField(max_length=100, unique=False)
 	author = models.CharField(max_length=100, unique=False)
@@ -14,3 +15,5 @@ class Forum(models.Model):
 
 	def __unicode__(self):
 		return '%s' %self.title
+Forum.objects.filter(pk=1).update(counter=F('counter') + 1)
+
