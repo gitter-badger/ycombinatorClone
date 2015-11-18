@@ -1,0 +1,16 @@
+{ % extends 'base.html' %}
+
+{%block title % } Welcome to Forums { % endblock %}
+
+{ % block content %} 
+{% if Forum % }
+{% for Forum in Forum % }
+{{Forum.title }}
+{% endfor %}
+
+{% else % }
+<p> There are no post </post>
+
+{ %endif %}
+
+{ % endblock %}

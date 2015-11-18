@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>{%block head_title%} Welcome to Y {%endblock%}
+</title>
+   {% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/basic.css' %}">
+</head>
+
+<body>
+{%block title%} Tech Forums {%endblock%}
+{%block content%}
+<p>{{title}}</p>
+ {%if Forum %}
+{%for w in Forum %}
+
+</ul>
+{%endfor%}
+
+{%else% }
+<p> There are no post </post>
+
+{%endif%}
+{%endblock%}
+</body>
+</html>

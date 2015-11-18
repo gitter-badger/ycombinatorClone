@@ -3,11 +3,11 @@ from django.db import models
 # Create your models here.
 
 class Forum(models.Model):
-	Title = models.CharField(max_length=100, unique=True)
-	Link = models.CharField(max_length=100, unique=False)
-	Votes= models.CharField(max_length=100, unique=False)
-	Time = models.TimeField(db_index=True, auto_now_add=True)
-	Slug = models.SlugField(max_length=100, unique=True)
+	title = models.CharField(max_length=100, unique=True)
+	link = models.CharField(max_length=100, unique=False)
+	votes= models.CharField(max_length=100, unique=False)
+	time = models.TimeField(db_index=True, auto_now_add=True)
+	slug = models.SlugField(max_length=100, unique=True)
 
 	def __unicode__(self):
-		return '%s' %self.Title
+		return '%s' %self.title

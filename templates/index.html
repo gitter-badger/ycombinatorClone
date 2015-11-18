@@ -1,0 +1,36 @@
+{%extends "base.html"%}
+
+<div class="body">
+<p>
+{ % block title % } Welcome to Forums { % endblock %}
+
+{%block content%} 
+{% if Forum %}
+{% for F in Forum %}
+
+<div class='header'>
+<img src= "https://news.ycombinator.com/y18.gif" height="1opx" width="10px">
+<span style= margin-top: 5px;position: absolute;">Hacker News</span>
+
+</div>
+<p><span>{{F.id }}</span>
+<span>	{{F.title }}</span>
+<span>{{F.link }}</span>
+</p>
+<p><span>{{F.votes }} </span> <span style="border-left:1px solid black"> <p>{{F.time }}</p>
+ </span> </p></p>
+
+</div>
+{%endfor%}
+
+{%else%}
+<p> There are no post </post>
+
+{%endif%}
+
+{%endblock%}
+
+
+
+
+
